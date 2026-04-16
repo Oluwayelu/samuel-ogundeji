@@ -839,19 +839,6 @@
         .querySelectorAll(".fade-in")
         .forEach((el) => observer.observe(el));
 
-      // Load profile image
-      fetch(
-        "/mnt/user-data/uploads/Gemini_Generated_Image_t6sgybt6sgybt6sg.png",
-      )
-        .then((response) => response.blob())
-        .then((blob) => {
-          const reader = new FileReader();
-          reader.onload = function (e) {
-            document.getElementById("profile-img").src = e.target.result;
-          };
-          reader.readAsDataURL(blob);
-        })
-        .catch((err) => console.log("Image loading handled by browser"));
     </script>
   </body>
 </html>
